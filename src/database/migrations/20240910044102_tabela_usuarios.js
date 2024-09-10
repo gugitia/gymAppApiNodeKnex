@@ -3,9 +3,10 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable("Concessionarias", function (table) {
-    table.increments("concessionaria_id").primary();
-    table.string("nome", 100).notNullable();
+  return knex.schema.createTable("User", function (table) {
+    table.increments("user_id").primary();
+    table.string("name").notNullable();
+    table.string("cpf").notNullable();
   });
 };
 
@@ -14,5 +15,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  return knex.schema.dropTable("Concessionarias");
+  return knex.schema.dropTable("User");
 };

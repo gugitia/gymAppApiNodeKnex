@@ -1,20 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-const concessionariaRoutes = require("./routes/concessionariaRoutes");
-const materiaisRoutes = require("./routes/materiaisRoutes");
-const clienteRoutes = require("./routes/clienteRoutes");
-const vendedorRoutes = require("./routes/vendedorRoutes.js");
-const servicoRoutes = require("./routes/servicosRoutes");
-const materialTemplateRoutes = require("./routes/materiaisServicosRoutes.js");
-const orcamentoRoutes = require("./routes/orcamentoRoutes.js");
+const userRoutes = require("./routes/userRoutes");
+const trainRoutes = require("./routes/trainRoutes");
+const exerciseRoutes = require("./routes/exerciseRoutes");
+const trainExercisesRoutes = require("./routes/trainExercisesRoutes");
 
-router.use("/concessionarias", concessionariaRoutes);
-router.use("/materiais", materiaisRoutes);
-router.use("/clientes", clienteRoutes);
-router.use("/vendedor", vendedorRoutes);
-router.use("/servicos", servicoRoutes);
-router.use("/servicos-materiais", materialTemplateRoutes);
-router.use("/orcamentos", orcamentoRoutes);
+router.use("/usuario", userRoutes);
+router.use("/treinos", trainRoutes);
+router.use("/exercisios", exerciseRoutes);
+router.use("/treino-exercisio", trainExercisesRoutes);
 
 module.exports = router;
